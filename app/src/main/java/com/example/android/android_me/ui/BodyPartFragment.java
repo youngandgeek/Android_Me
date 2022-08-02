@@ -1,35 +1,46 @@
 package com.example.android.android_me.ui;
 
-import android.app.Fragment;
-import android.content.Context;
-
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.android.android_me.R;
 import com.example.android.android_me.data.AndroidImageAssets;
 
-public class BodyPartFragment extends Fragment {
+import java.util.List;
 
-    //mandatory constructor
+public class BodyPartFragment extends android.app.Fragment {
+
+    private List<Integer> bodyImageId;
+    private int bodyImageIndex;
     public BodyPartFragment() {
     }
 
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View rootView= inflater.inflate(R.layout.fragment_body_part,container,false);
+        ImageView imageView=(ImageView) rootView.findViewById(R.id.body_part_image_view);
+        if (bodyImageId!=null){
+            imageView.setImageResource(bodyImageId.get(bodyImageIndex));
 
-        View rootView=inflater.inflate(R.layout.fragment_body_part,container,false);
-
-        //get a reference of the image view in the layout
-        ImageView imageView= (ImageView) rootView.findViewById(R.id.body_part_image_view);
-        //set the image resource to display
-        imageView.setImageResource(AndroidImageAssets.getHeads().get(0));
+        }
+        else {
+            Toast.makeText(getActivity(),"image id list is null",Toast.LENGTH_SHORT).show();
+        }
         return rootView;
+    }
 
+    public void setBodyImageId(List<Integer> bodyImageId) {
+        this.bodyImageId = bodyImageId;
+    }
+
+    public void setBodyImageIndex(int bodyImageIndex) {
+        this.bodyImageIndex = bodyImageIndex;
     }
 }
