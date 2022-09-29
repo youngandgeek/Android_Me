@@ -15,8 +15,11 @@ import java.util.List;
 
 public class BodyPartFragment extends android.app.Fragment {
 
-    private List<Integer> bodyImageId;
-    private int bodyImageIndex;
+
+
+    private List<Integer> mImageIds;
+    private int mListIndex;
+
     public BodyPartFragment() {
     }
 
@@ -26,8 +29,8 @@ public class BodyPartFragment extends android.app.Fragment {
         // Inflate the layout for this fragment
         View rootView= inflater.inflate(R.layout.fragment_body_part,container,false);
         ImageView imageView=(ImageView) rootView.findViewById(R.id.body_part_image_view);
-        if (bodyImageId!=null){
-            imageView.setImageResource(bodyImageId.get(bodyImageIndex));
+        if (mImageIds!=null){
+            imageView.setImageResource(mImageIds.get(mListIndex));
 
         }
         else {
@@ -36,11 +39,15 @@ public class BodyPartFragment extends android.app.Fragment {
         return rootView;
     }
 
-    public void setBodyImageId(List<Integer> bodyImageId) {
-        this.bodyImageId = bodyImageId;
+    // Setter methods for keeping track of the list images this fragment can display and which image
+    // in the list is currently being displayed
+
+    public void setImageIds(List<Integer> imageIds) {
+        mImageIds = imageIds;
     }
 
-    public void setBodyImageIndex(int bodyImageIndex) {
-        this.bodyImageIndex = bodyImageIndex;
+    public void setListIndex(int index) {
+        mListIndex = index;
     }
+
 }
