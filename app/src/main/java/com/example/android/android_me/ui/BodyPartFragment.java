@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.example.android.android_me.R;
 import com.example.android.android_me.data.AndroidImageAssets;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class BodyPartFragment extends android.app.Fragment {
