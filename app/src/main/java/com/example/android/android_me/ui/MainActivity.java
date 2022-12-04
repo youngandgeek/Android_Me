@@ -17,14 +17,19 @@
 package com.example.android.android_me.ui;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 import com.example.android.android_me.R;
+import com.example.android.android_me.data.AndroidImageAssets;
+
+import org.w3c.dom.Text;
 
 // This activity is responsible for displaying the master list of all images
 // TODO (4) Implement the MasterListFragment callback, OnImageClickListener
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  implements MasterListFragment.OnImageClickListener {
 
 
     @Override
@@ -32,8 +37,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Create a new head MasterListFragment
+        MasterListFragment masterListFragment = new MasterListFragment();
+        // Add the fragment to its container using a FragmentManager and a Transaction
+        FragmentManager fragmentManager = getSupportFragmentManager();
+
+        fragmentManager.beginTransaction()
+                .add(R.id.master_list_fragment, masterListFragment)
+                .commit();
+
+        // Create and display the body and leg BodyPartFragments
+
+    }
+    // TODO (5) Define the behavior for onImageSelected; create a Toast that displays the position clicked
+
+    @Override
+    public void onImageSelected(int position) {
+        Toast.makeText(this,"position clicked"+position, Toast.LENGTH_LONG).show();
     }
 
-    // TODO (5) Define the behavior for onImageSelected; create a Toast that displays the position clicked
 
 }
