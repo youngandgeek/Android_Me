@@ -65,9 +65,11 @@ public class BodyPartFragment extends Fragment {
 
         // Get a reference to the ImageView in the fragment layout
        final ImageView imageView = (ImageView) rootView.findViewById(R.id.body_part_image_view);
+       imageView.setImageResource(mImageIds.get(mListIndex));
 
         // If a list of image ids exists, set the image resource to the correct item in that list
         // Otherwise, create a Log statement that indicates that the list was not found
+     /**
         if(mImageIds != null){
             // Set the image resource to the list item at the stored index
 //            imageView.setImageResource(mImageIds.get(mListIndex));
@@ -91,7 +93,7 @@ public class BodyPartFragment extends Fragment {
         } else {
             Log.v(TAG, "This fragment has a null list of image id's");
         }
-
+**/
         // Return the rootView
         return rootView;
     }
