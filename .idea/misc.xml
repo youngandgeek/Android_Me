@@ -3,14 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/Android_Me/app/src/main/res/layout-sw600dp/activity_main.xml" value="0.11236338797814208" />
+        <entry key="..\:/AndroidStudioProjects/Android_Me/app/src/main/res/layout-sw600dp/layout-600dp.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/Android_Me/app/src/main/res/layout-w600dp-small/layout_sw600db.xml" value="0.10802469135802469" />
+        <entry key="..\:/AndroidStudioProjects/Android_Me/app/src/main/res/layout-w600dp/layout_sw600dp.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProjects/Android_Me/app/src/main/res/layout/activity_android_me.xml" value="0.11614583333333334" />
         <entry key="..\:/AndroidStudioProjects/Android_Me/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/Android_Me/app/src/main/res/layout/dd.xml" value="0.11041666666666666" />
         <entry key="..\:/AndroidStudioProjects/Android_Me/app/src/main/res/layout/fragment_body_part.xml" value="0.11614583333333334" />
         <entry key="..\:/AndroidStudioProjects/Android_Me/app/src/main/res/layout/fragment_chest_part.xml" value="0.18614130434782608" />
         <entry key="..\:/AndroidStudioProjects/Android_Me/app/src/main/res/layout/fragment_head_part.xml" value="0.209375" />
         <entry key="..\:/AndroidStudioProjects/Android_Me/app/src/main/res/layout/fragment_legs.xml" value="0.11041666666666666" />
         <entry key="..\:/AndroidStudioProjects/Android_Me/app/src/main/res/layout/fragment_legs_part.xml" value="0.18614130434782608" />
         <entry key="..\:/AndroidStudioProjects/Android_Me/app/src/main/res/layout/fragment_master_list.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/Android_Me/app/src/main/res/xml-sw600dp/layout_sw600dp.xml" value="0.12260928961748634" />
       </map>
     </option>
   </component>

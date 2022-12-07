@@ -22,6 +22,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -69,7 +70,6 @@ public class MasterListFragment extends Fragment {
 
         // Get a reference to the GridView in the fragment_master_list xml layout file
         GridView gridView = (GridView) rootView.findViewById(R.id.grid_view_img);
-
         // Create the adapter
         // This adapter takes in the context and an ArrayList of ALL the image resources to display
         MasterListAdapter mAdapter = new MasterListAdapter(getContext(), AndroidImageAssets.getAll());
